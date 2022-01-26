@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  width: 220px;
+  height: 45px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+.table:nth-child(odd) {
+  background-color: rgb(192 196 196);
+}

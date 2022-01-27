@@ -30,6 +30,7 @@ div.block > label > input {
   border-radius: 5px;
   margin-top: 3px;
   margin-bottom: 15px;
+  border-style: solid;
 }
 
 select {
@@ -43,6 +44,7 @@ select {
   margin-bottom: 15px;
   border-color: #cecdcd;
   border-width: thin;
+  border-style: solid;
   background-color: rgb(243 241 241 / 80.1%);
   text-indent: 1px;
 }
@@ -53,11 +55,11 @@ form > input.submit {
   font-size: 14px;
   color: white;
   background-color: rgb(223 72 72 / 91.1%);
-  border-color: rgb(223 72 72 / 91.1%);
   width: 100px;
   height: 35px;
   border-radius: 20px;
   margin-top: 13px;
+  border-style: none;
 }
 
 ::placeholder {

@@ -1,0 +1,21 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-third,
+.column-one-fourth > img {
+  width: 100%;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-family: sans-serif, serif;
+}

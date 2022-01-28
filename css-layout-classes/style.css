@@ -10,6 +10,7 @@
 .column-one-third,
 .column-one-fourth > img {
   width: 100%;
+  flex-basis: auto;
 }
 
 * {
@@ -18,4 +19,8 @@
 
 p {
   font-family: sans-serif, serif;
+}
+
+.column-two-third {
+  width: auto;
 }

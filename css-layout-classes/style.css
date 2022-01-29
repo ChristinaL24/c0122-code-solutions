@@ -7,20 +7,27 @@
   display: flex;
 }
 
-.column-one-third,
-.column-one-fourth > img {
+img {
   width: 100%;
-  flex-basis: auto;
+}
+
+.column-one-fourth {
+  width: 25%;
+}
+
+.column-two-third {
+  width: calc(200% / 3);
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+}
+
+.full-column {
+  width: 100%;
 }
 
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-p {
-  font-family: sans-serif, serif;
-}
-
-.column-two-third {
-  width: auto;
+  box-sizing: border-box;
 }

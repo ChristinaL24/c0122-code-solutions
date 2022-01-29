@@ -10,13 +10,14 @@
 
 .row {
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.column-full {
+  width: 100%;
 }
 
 .column-one-third {
   width: calc(100% / 3);
-  position: relative;
 }
 
 body {
@@ -33,27 +34,23 @@ h3 {
 }
 
 .icon {
-  z-index: 1;
   height: 55px;
   width: 55px;
-  position: absolute;
-  top: 28px;
-  left: 130px;
+  position: relative;
+  left: 1.3em;
+  top: 1.5em;
 }
 
 .circle {
   background-color: white;
-  position: relative;
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  z-index: 0;
-  margin: 5px;
-  top: 2px;
-  left: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-p.text {
+p {
   line-height: 1.2;
   text-align: center;
   padding-left: 50px;

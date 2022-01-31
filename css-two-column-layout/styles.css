@@ -10,6 +10,7 @@
 
 .full-column {
   width: 100%;
+  text-align: center;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
   width: 100%;
   word-spacing: 3px;
   letter-spacing: 3px;
-  text-align: center;
   color: rgb(14 14 14);
 }
 
@@ -57,27 +57,20 @@ h4 {
 }
 
 img.icon {
-  position: relative;
-  right: 5.8em;
-  top: 4.5em;
   height: 85px;
   width: 100px;
 }
 
-div > form > input.button {
+div > input.button {
   background-color: white;
   color: #d7645f;
   font-family: Karla, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: bold;
   border-color: #d7645f;
   justify-content: center;
   margin-top: 1em;
   height: 30px;
-  width: 125px;
+  width: 140px;
   border-style: solid;
-  align-items: center;
-}
-
-form > input {
-  width: 100%;
 }

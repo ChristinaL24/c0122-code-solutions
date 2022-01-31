@@ -1,0 +1,82 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.row {
+  display: flex;
+}
+
+.full-column {
+  width: 100%;
+}
+
+h1 {
+  font-family: Karla, sans-serif;
+  font-weight: 550;
+  width: 100%;
+  word-spacing: 3px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: rgb(14 14 14);
+}
+
+p {
+  font-family: Karla, sans-serif;
+  color: rgb(77 76 76);
+  font-size: 12px;
+}
+
+p.row-one-p {
+  text-align: center;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+p.row-two-p {
+  letter-spacing: 0.5px;
+  padding-right: 5px;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-family: Karla, sans-serif;
+  color: rgb(19 19 19);
+  font-size: 12px;
+  line-height: 0px;
+  width: 100%;
+}
+
+.column-one,
+.column-two {
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+img.icon {
+  position: relative;
+  right: 5.8em;
+  top: 4.5em;
+  height: 85px;
+  width: 100px;
+}
+
+div > form > input.button {
+  background-color: white;
+  color: #d7645f;
+  font-family: Karla, sans-serif;
+  font-size: 11px;
+  border-color: #d7645f;
+  justify-content: center;
+  margin-top: 1em;
+  height: 30px;
+  width: 125px;
+  border-style: solid;
+}
+
+form > input {
+  width: 100%;
+}

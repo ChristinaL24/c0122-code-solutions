@@ -20,23 +20,25 @@ h1 {
   word-spacing: 3px;
   letter-spacing: 3px;
   color: rgb(14 14 14);
+  font-size: 45px;
 }
 
 p {
   font-family: Karla, sans-serif;
-  color: rgb(77 76 76);
-  font-size: 12px;
+  color: rgb(99 98 98);
+  font-size: 13px;
 }
 
 p.row-one-p {
   text-align: center;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 105px;
+  padding-right: 105px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
 }
 
 p.row-two-p {
   letter-spacing: 0.5px;
-  padding-right: 5px;
   line-height: 1.5em;
 }
 
@@ -44,20 +46,18 @@ h4 {
   font-family: Karla, sans-serif;
   color: rgb(19 19 19);
   font-size: 12px;
-  line-height: 0px;
+  line-height: 15px;
   width: 100%;
+  letter-spacing: 1px;
 }
 
-.column-one,
-.column-two {
-  width: 100%;
-  justify-content: flex-start;
-  padding-left: 80px;
-  padding-right: 80px;
+.column-half {
+  width: 50%;
+  flex-direction: column;
 }
 
 img.icon {
-  height: 85px;
+  height: 90px;
   width: 100px;
 }
 

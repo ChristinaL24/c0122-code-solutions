@@ -75,6 +75,7 @@ div > form > input.button {
   height: 30px;
   width: 125px;
   border-style: solid;
+  align-items: center;
 }
 
 form > input {

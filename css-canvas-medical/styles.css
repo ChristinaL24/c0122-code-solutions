@@ -183,3 +183,11 @@ img {
   width: 100%;
   opacity: 0.79;
 }
+
+.hero {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+}

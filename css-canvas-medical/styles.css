@@ -1,5 +1,5 @@
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -17,24 +17,26 @@
   width: 100%;
   font-family: Avenir, sans-serif;
   display: flex;
-  color: #696969;
   height: 80px;
   font-size: 15px;
 }
 
-p.contact,
-p.privacy {
+a.contact,
+a.privacy {
   padding-left: 50px;
   padding-top: 20px;
+  text-decoration: none;
+  color: #696969;
 }
 
-.grey {
+.directory {
   background-color: #525351;
   width: 100%;
   color: #fff;
   height: 280px;
   display: flex;
   padding-right: 40px;
+  padding-top: 50px;
 }
 
 .column-one-half {
@@ -45,12 +47,13 @@ p.privacy {
   width: 25%;
 }
 
-h2.canvas {
+h1.white-canvas {
   font-family: "Tiempos Headline", sans-serif;
   letter-spacing: 3.5px;
   padding-left: 50px;
-  padding-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+  font-size: 28px;
+  font-weight: 10;
 }
 
 div.address {
@@ -60,23 +63,21 @@ div.address {
   padding-left: 50px;
 }
 
-div.company-blog {
-  line-height: 20px;
+div.company-blog > a,
+div.product-security > a {
+  line-height: 30px;
   font-family: Avenir, sans-serif;
   padding-left: 50px;
-  padding-top: 40px;
-  margin-bottom: 25px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
 }
 
-div.product-security {
-  line-height: 20px;
-  font-family: Avenir, sans-serif;
-  padding-left: 50px;
-  padding-top: 40px;
-  margin-bottom: 25px;
+div.column-one-fourth {
+  padding-top: 20px;
 }
 
-.something {
+.schedule {
   display: flex;
   line-height: 15px;
   margin-bottom: 20px;
@@ -89,16 +90,18 @@ div.product-security {
   width: 75%;
 }
 
-h2.ready {
+h2 {
   font-family: "Tiempos Headline", sans-serif;
-  color: #525351;
+  color: #6d6c6c;
   word-spacing: 2px;
+  font-weight: lighter;
+  font-size: 20px;
 }
 
 p.ready-text {
   font-family: Avenir, sans-serif;
   font-size: 12px;
-  color: #525351;
+  color: #7c7e7c;
 }
 
 .blue-button {
@@ -110,5 +113,73 @@ p.ready-text {
   border-radius: 5px;
   border-style: none;
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.locations {
+  background-color: #fafafa;
+  width: 100%;
+  color: #6a6b6a;
+  height: 300px;
+  text-align: center;
+}
+
+p.physician {
+  font-family: Avenir, sans-serif;
+  padding-left: 210px;
+  padding-right: 210px;
+  line-height: 25px;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+p.physician-location {
+  font-family: Avenir, sans-serif;
+  font-size: 13px;
+  color: #777676;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contact-button {
+  background-color: #294464;
+  width: 80px;
+  height: 25px;
+  color: white;
+  font-family: Avenir, sans-serif;
+  border-radius: 4px;
+  border-style: none;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.navigation {
+  width: 100%;
+  line-height: 0;
+}
+
+a.nav-buttons {
+  text-decoration: none;
+  color: #a7a8a7;
+  font-family: Avenir, sans-serif;
+  font-size: 11.5px;
+}
+
+.page-top {
+  word-spacing: 15px;
+  text-align: end;
+  padding-bottom: 20px;
+}
+
+span.blue-canvas {
+  color: #335681;
+  font-family: "Tiempos Headline", sans-serif;
+  font-size: 28px;
+  letter-spacing: 3.5px;
+  margin-right: 200px;
+}
+
+img {
+  width: 100%;
+  opacity: 0.79;
 }

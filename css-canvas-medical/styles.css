@@ -106,13 +106,13 @@ p.ready-text {
 
 .blue-button {
   background-color: #294464;
-  width: 160px;
-  height: 40px;
+  width: 125px;
+  height: 33px;
   color: white;
   font-family: Avenir, sans-serif;
   border-radius: 5px;
   border-style: none;
-  font-size: 15px;
+  font-size: 12px;
   margin-top: 10px;
 }
 
@@ -122,6 +122,7 @@ p.ready-text {
   color: #6a6b6a;
   height: 300px;
   text-align: center;
+  padding-top: 15px;
 }
 
 p.physician {
@@ -156,6 +157,7 @@ p.physician-location {
 .navigation {
   width: 100%;
   line-height: 0;
+  border-bottom: 1px solid rgb(163 162 162);
 }
 
 a.nav-buttons {
@@ -180,14 +182,38 @@ span.blue-canvas {
 }
 
 img {
-  width: 100%;
   opacity: 0.79;
+  width: 85%;
 }
 
-.hero {
+.hero-image {
   position: relative;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  left: 3.2em;
+  filter: brightness(70%);
 }
 
 .hero-text {
   position: absolute;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: white;
+  top: 5em;
+  padding-left: 50px;
+  padding-right: 80px;
+}
+
+h1.hero-heading {
+  font-weight: lighter;
+  padding-right: 200px;
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+p.hero-paragraph {
+  font-family: Avenir, sans-serif;
+  font-size: 10px;
+  line-height: 16px;
+  padding-right: 225px;
 }

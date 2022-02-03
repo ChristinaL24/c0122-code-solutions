@@ -1,0 +1,7 @@
+/* exported sumAll */
+function sumAll(numbers) {
+  var sum = [];
+  for (var i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  } return sum;
+}

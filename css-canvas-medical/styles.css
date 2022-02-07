@@ -30,9 +30,8 @@
 }
 
 .blue-logo {
-  height: 20px;
   width: 83px;
-  margin-right: 185px;
+  margin-right: 175px;
   margin-top: 55px;
 }
 
@@ -158,16 +157,17 @@ p.physician-location {
   border-style: none;
   font-size: 11px;
   margin-top: 10px;
+  margin-right: 8px;
 }
 
 .navigation {
   width: 100%;
   line-height: 0;
-  border-bottom: 1px solid rgb(207 204 204);
+  border-bottom: 0.5px solid rgb(207 204 204);
   margin-right: 50px;
 }
 
-a.nav-buttons {
+.nav-buttons {
   text-decoration: none;
   color: #a7a8a7;
   font-family: Avenir, sans-serif;
@@ -177,8 +177,7 @@ a.nav-buttons {
 .page-top {
   word-spacing: 15px;
   text-align: end;
-  padding-bottom: 20px;
-  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 span.blue-canvas {

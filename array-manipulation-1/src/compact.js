@@ -5,7 +5,10 @@
 Goal:
 -Declare a function with its name and parameter
 -Create a storage for our function
-
+-Create a storage that includes the values to be omitted
+-Create a condition that will loop through each value and determine whether or
+ not the values should be pushed or omitted
+-Return our variable from the function
 */
 
 function compact(array) {
@@ -14,8 +17,10 @@ function compact(array) {
   var banned = [null, false, NaN, undefined, '', 0, -0];
 
   for (var i = 0; i < array.length; i++) {
-    if (array.includes(banned) !== banned) {
-      newArray.push(array[i]);
+    for (var j = 0; j < banned.length; j++) {
+      if (array.includes(banned, 0) === banned[j]) {
+        newArray.push(array[i]);
+      }
     }
   }
   return newArray;

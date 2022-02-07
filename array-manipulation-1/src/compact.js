@@ -17,10 +17,8 @@ function compact(array) {
   var banned = [null, false, NaN, undefined, '', 0, -0];
 
   for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j < banned.length; j++) {
-      if (array.includes(banned, 0) === banned[j]) {
-        newArray.push(array[i]);
-      }
+    if (array.includes(banned) !== false) {
+      newArray.push(array[i]);
     }
   }
   return newArray;

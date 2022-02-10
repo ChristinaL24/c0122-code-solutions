@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255 248 238);
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.full-column {
+  width: 100%;
+}
+
+.light-bulb {
+  background-color: rgb(255 237 136);
+  border-radius: 50%;
+  height: 190px;
+  width: 195px;
+  box-shadow: 0 0 30px rgb(255 246 121);
+  border: none;
+}
+
+.light-bulb.on {
+  background-color: rgb(255 237 136);
+  box-shadow: 0 0 30px rgb(255 246 121);
+}
+
+body.on {
+  background-color: rgb(255 248 238);
+}
+
+.light-bulb.off {
+  background-color: rgb(78 78 78);
+  box-shadow: none;
+}
+
+body.off {
+  background-color: rgb(36 36 36);
+}

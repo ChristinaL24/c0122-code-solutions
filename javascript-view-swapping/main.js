@@ -8,9 +8,9 @@ function tabContainerFunction(event) {
   if (event.target && event.target.matches('.tab')) {
     for (var i = 0; i < $tab.length; i++) {
       if ($tab[i] === event.target) {
-        $tab.className = '.tab.active';
+        $tab[i].className = 'tab active';
       } else {
-        $tab.className = '.tab';
+        $tab[i].className = 'tab';
       }
     }
     var $dataView = event.target.getAttribute('data-view');

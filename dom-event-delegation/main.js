@@ -8,5 +8,6 @@ function taskListFunction(event) {
   if (event.target && event.target.nodeName === 'BUTTON') {
     var closestElement = event.target.closest('.task-list-item');
     console.log('closest .task-list-item', closestElement);
+    closestElement.remove();
   }
 }

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-size: 1.5rem;
 }
 
 .container {
@@ -27,6 +28,22 @@ body {
   align-items: center;
 }
 
-.words {
-  word-spacing: 10px;
+.word-spacing {
+  word-spacing: 0.6rem;
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+.underline {
+  border-bottom: 2px solid black;
+}
+
+.blue-char {
+  color: rgb(89 226 203);
+}
+
+.red-char {
+  color: red;
 }

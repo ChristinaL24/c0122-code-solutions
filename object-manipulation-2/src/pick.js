@@ -20,6 +20,10 @@ is not added to the new Object.
     -Assign the value of the variable 'value' to 'object at key'
 -Return the variable object from the function
 
+Note: (source[key])
+If key exist in source, you will get back value. If the key does not exist in the source,
+you will get back undefined
+
 */
 
 function pick(source, keys) {

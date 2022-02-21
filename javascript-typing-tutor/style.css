@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body {
+  background-color: #fcf8f3;
+}
+
+.words-position {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+}
+
+.word-spacing {
+  word-spacing: 0.6rem;
+}
+
+.letter-spacing {
+  letter-spacing: 1px;
+}
+
+.underline {
+  border-bottom: 2px solid black;
+}
+
+.blue-char {
+  color: rgb(89 226 203);
+}
+
+.red-char {
+  color: red;
+}

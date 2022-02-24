@@ -6,24 +6,37 @@ function Account(number, holder) {
 }
 
 Account.prototype.deposit = function (amount) {
-  if (Number.isInteger(amount) > 0) {
-    var deposit = new Transaction('deposit', Number.isInteger(amount));
+  if (amount <= 0 || !Number.isInteger(amount)) {
+    return false;
+  } else {
+    var deposit = new Transaction('deposit', amount);
     this.transactions.push(deposit);
     return true;
-  } else {
-    return false;
   }
 };
 
 Account.prototype.withdraw = function (amount) {
-  if (amount > 0) {
-    var withdrawl = new Transaction('withdrawl', amount);
-    this.transactions.push(withdrawl);
+  if (amount <= 0 || !Number.isInteger(amount)) {
+    return false;
+  } else {
+    var withdrawal = new Transaction('withdrawal', amount);
+    this.transactions.push(withdrawal);
     return true;
   }
-  return false;
 };
 
 Account.prototype.getBalance = function (amount) {
-
+  var balance = 0;
+  if (this.transactions.length === 0) {
+    return 0;
+  } else {
+    for (var i = 0; i < this.transactions.length; i++) {
+      if (this.transactions[i].type === 'deposit') {
+        balance += this.transactions[i].amount;
+      } else if (this.transactions[i].type === 'withdrawal') {
+        balance -= this.transactions[i].amount;
+      }
+    }
+    return balance;
+  }
 };

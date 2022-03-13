@@ -13,7 +13,7 @@ Goal: Return an array of arrays
 function zip(first, second) {
   var zipStorage = [];
   for (var i = 0; i < first.length; i++) {
-    if (second.length >= first.length) {
+    if (second.length > i) {
       var indexStorage = [];
       var firstArray = first[i];
       var secondArray = second[i];

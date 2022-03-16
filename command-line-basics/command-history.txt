@@ -1,0 +1,679 @@
+    1  exit
+    2  enter
+    3  exit
+    4  cd ~/repos/c0122-code-solutions
+    5  git checkout master
+    6  git status
+    7  whoami
+    8  git pull origin master
+    9  git status
+   10  git branch http-messages
+   11  git status
+   12  git checkout http-messages
+   13  git status
+   14  http http://www.example.com
+   15  http --verbose http://www.example.com
+   16  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   17  http --body GET https://example.com > http-messages/index.html
+   18  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   19  http --body GET https://example.com > http-messages/index.html
+   20  git status
+   21  git add http-messages/
+   22  git status
+   23  git commit -m "Completed http-messages exercise."
+   24  git config --global user.name "ChristinaL24"
+   25  whoami
+   26  git status
+   27  git commit -m "Completed http-message exercise."
+   28  git push origin http-messages
+   29  git status
+   30  git checkout master
+   31  git pull origin master
+   32  git status
+   33  git branch javascript-ajax
+   34  git status
+   35  git checkout javascript-ajax
+   36  git status
+   37  git add javascript-ajax
+   38  git status
+   39  git commit -m "Completed javascript-ajax exercise."
+   40  git push origin javascript-ajax
+   41  git status
+   42  git checkout master
+   43  git status
+   44  http http://petfinder.com
+   45  http https://www.petfinder.com/developers/v2/docs/#get-animal-types
+   46  http --verbose https://www.petfinder.com/developers/v2/docs/#get-animal-types
+   47  curl -d "grant_type=client_credentials&client_id={XPXODZAAMEUdIxOqQsUpUnRpmfPdZOUSKE9ilgFOhV3KgDbqye}&client_secret={1C5j3cc9K3p9v13JvkizWtzCLPYnJhFegtmDSDH}" https://api.petfinder.com/v2/oauth2/token
+   48  curl -d "grant_type=client_credentials&client_id={xPXoDzAA,EUdlx0qQsUpUnRpmfPdZOUSkE9ilgFOhV3KgDbqYe}&client_secret={1C5j3cc9K3p9V13JvkizWtzCLPYnJhFegtmDSDyH}" https://api.petfinder.com/v2/oauth2/token
+   49  curl -d "grant_type=client_credentials&client_id={xPXoDzAAmEUdlx0qQsUpUnRpmfPdZOUSkE9ilgFOhV3KgDbqYe}&client_secret={1C5j3cc9K3p9V13JvkizWtzCLPYnJhFegtmDSDYH}" https://api.petfinder.com/v2/oauth2/token
+   50  curl -d "grant_type=client_credentials&client_id={xPXoDzAAmEUdlx0qQsUpUnRpmfPdZOUSkE9ilgFOhV3KgDbqYe}&client_secret={1C5j3cc9K3p9V13JvkizWtzCLPYnJhFegtmDSDyH}" https://api.petfinder.com/v2/oauth2/token
+   51  http https://www.adoptapet.com/public/apis/pet_list.html
+   52  curl -d "grant_type=client_credentials&client_id=xPXoDzAAmEUdlx0qQsUpUnRpmfPdZOUSkE9ilgFOhV3KgDbqYe&client_secret=1C5j3cc9K3p9V13JvkizWtzCLPYnJhFegtmDSDyH" https://api.petfinder.com/v2/oauth2/token
+   53  curl -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ4UFhvRHpBQW1FVWRseDBxUXNVcFVuUnBtZlBkWk9VU2tFOWlsZ0ZPaFYzS2dEYnFZZSIsImp0aSI6ImRhMTRiOWM1NmY2NjA3OTdjNThlZGNkY2JmZDdhMWY2YmE2NmIzYzM3YzkyMDkwYTBmOTk0YTJlZDkzMDBhZDU3MjViMmU0N2Y2MGM5OWZiIiwiaWF0IjoxNjQ2MDE0Mzg4LCJuYmYiOjE2NDYwMTQzODgsImV4cCI6MTY0NjAxNzk4OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.rD1Xh_qLvF0X1KEGUUAw-aIfXx7wVfuo4JIbjvHVUPUKssc2DSGVMZK54Retz4OAYJRLS2KAucUpN_YfCCgMQg6DAFvuRwOMilRulimFGAsKatUgafl_hiOuvkZpidEioXUdLmyfqAMVz_KGe2OhrY9BqItJ8nGy8p8LE6LnC6WlewF4H99DrGNc8ewGqXlHwFZcHX4QMA5o_vhANCINJBNu6HcEkhEWPlQS-be_42_dd-anL6qvjJXMZrs8XpusTXLL8-fNm4OoNTEVTzcZc4v1aLHQKpee28AtxpvZd-_wT6aAPlaKa-aeZykMX4F08ExxFeWmsOU-AJdKpIBZtg" GET https://api.petfinder.com/v2/{CATEGORY}/{ACTION}?{parameter_1}={value_1}&{parameter_2}={value_2}
+   54  clear
+   55  https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+   56  http https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+   57  http --verbose https://api.adoptapet.com/search/pets_at_shelter?key=A34F48&v=1&output=xml&shelter_id=2342
+   58  http https://www.adoptapet.com/
+   59  hhtp http://makeup-api.herokuapp.com/api/v1/products.json
+   60  http http://makeup-api.herokuapp.com/api/v1/products.json
+   61  http --verbose http://makeup-api.herokuapp.com/api/v1/products.json
+   62  clear
+   63  http --verbose http://makeup-api.herokuapp.com/api/v1/products.json
+   64  clear
+   65  git status
+   66  git pull origin master
+   67  git status
+   68  git checkout array-manipulation-3
+   69  git status
+   70  git array-manipulation-3-src/equal.js
+   71  git add array-manipulation-3/src/equal.js
+   72  git array-manipulation-3/src/flatten.js
+   73  git add array-manipulation-3/src/flatten.js
+   74  git status
+   75  git commit -m "still in progress."
+   76  git status
+   77  git checkout master
+   78  cd ~/repos
+   79  git clone git@github.com:ChristinaL24/ajax-project.git
+   80  cd ajax-project
+   81  npm ci
+   82  git pull origin master
+   83  git status
+   84  git branch issue-1-users-view-products
+   85  git checkout issue-1-users-view-products
+   86  git status
+   87  git add css/styles.css
+   88  git add index.html
+   89  git add images/Placeholder.png
+   90  git status
+   91  git commit -m "Linked all starter files and added a div with data-view=product-list to html."
+   92  git status
+   93  git add index.html
+   94  git status
+   95  git commit -m "Add some dummy data product entries to the unordered list in the html and style them to match the wireframe."
+   96  git status
+   97  git add css/layout.css
+   98  git add css/styles.css
+   99  git add images/Placeholder.png
+  100  git add index.html
+  101  git status
+  102  git add images/product_laydown_matte_ink_pinks_8_dmi_image_na_no-cta_800x1067.webp
+  103  git status
+  104  git commit -m "Still in progress."
+  105  git status
+  106  git add css/layout.css
+  107  git add index.html
+  108  git status
+  109  git commit -m "Ensure that product listings look good on both mobile and desktop."
+  110  http http://makeup-api.herokuapp.com/api/v1/products.json
+  111  git status
+  112  git add css/layout.css
+  113  git add css/styles.css
+  114  git add index.html
+  115  git add js/main.js
+  116  git status
+  117  git commit -m "Ensured that public API works"
+  118  git status
+  119  git add js/main.js
+  120  git status
+  121  git commit -m "Ensured that public API works using the HTTPie and XMLHttpRequest."
+  122  git status
+  123  git add index.html
+  124  git add js/main.js
+  125  git status
+  126  git commit -m "Create a function that takes a sCreate a function that takes a single product listing object and returns a DOM tree that matches one of the example entries in the HTML"
+  127  git status
+  128  git add css/layout.css
+  129  git add js/main.js
+  130  git status
+  131  git commit -m "Use a loop to create a DOM tree for each product listing in the data model and ‘append’ it to the page when the ‘‘’DOMContentLoaded’’’ event is fired"
+  132  git sattus
+  133  git status
+  134  images/image.png
+  135  git add images/image.png
+  136  ls ../images/image.png
+  137  cd ..
+  138  cd ~/repos/ajax-project
+  139  git status
+  140  git add js/main.js
+  141  git status
+  142  git commit -m "Included image that says product image not available"
+  143  git status
+  144  git add js/main.js
+  145  git status
+  146  git commit -m "Implemented logic for null and zero values."
+  147  git status
+  148  git add js/main.js
+  149  git commit -m "Fixed prices to have correct decimals."
+  150  git status
+  151  git index.html
+  152  git add js/main.js
+  153  git status
+  154  git add index.html
+  155  git status
+  156  git commit -m "Removed dummy data."
+  157  git status
+  158  git add css/layout.css
+  159  git add css/styles.css
+  160  git add index.html
+  161  git js/main.js
+  162  git add js/main.js
+  163  git status
+  164  git add css/styles.css
+  165  git status
+  166  git commit -m "clean up styling."
+  167  git status
+  168  whoami
+  169  git config --global user.email "christinaah02@gmail.com"
+  170  git config --global --list
+  171  enter
+  172  git status
+  173  cd ~/repos/ajax-project
+  174  git status
+  175  git pull origin master
+  176  git status
+  177  git branch issue-3-save-products
+  178  git status
+  179  git checkout issue-3-save-products
+  180  git status
+  181  git add css/layout.css
+  182  git add index.html
+  183  git add js/main.js
+  184  git status
+  185  git commit -m "Add a saved icon to the nav-bar"
+  186  git status
+  187  git add css/layout.css
+  188  git add css/styles.css
+  189  git add index.html
+  190  git status
+  191  git commit -m "Added a save button below the description section of details page"
+  192  git status
+  193  git add index.html
+  194  git commit "stled button to ensure that it looks good on both mobile and desktop"
+  195  git commit -m "Style the button to ensure that it looks good on both mobile and desktop"
+  196  git status
+  197  git add index.html
+  198  git add js/data.js
+  199  git add js/main.js
+  200  git status
+  201  git commit -m "still in progress."
+  202  git status
+  203  git add js/main.js
+  204  git status
+  205  git commit -m "still in progress."
+  206  git status
+  207  git add js/main.js
+  208  git status
+  209  git commit -m "still in progress."
+  210  git status
+  211  git add css/layout.css
+  212  git add css/styles.css
+  213  git add index.html
+  214  git add js/data.js
+  215  git add js/main.js
+  216  git status
+  217  git commit -m "Got corresponding id of item saved in local storage"
+  218  git status
+  219  git add js/data.js
+  220  git js/main.js
+  221  git add js/main.js
+  222  git status
+  223  git commit -m "Ensure that the local storage is saving the product listing when clicked"
+  224  git status
+  225  git add js/main.js
+  226  git status
+  227  git commit -m "Created a function that checked if a listing exist in our local storage."
+  228  git status
+  229  git add css/layout.css
+  230  git status
+  231  git commit -m "clean up styling, test in private, fixed all errors."
+  232  git push origin issue-3-save-products
+  233  git status
+  234  git checkout master
+  235  git status
+  236  git pull origin master
+  237  git status
+  238  git branch issue-4-view-saved-products
+  239  git status
+  240  git add index.html
+  241  git commit -m "Change ‘Beauty List’ header to ‘Saved Items’ header"
+  242  git status
+  243  git add js/main.js
+  244  git status
+  245  git commit -m "Add an event listener for the saved icon"
+  246  git status
+  247  git add index.html
+  248  git add js/main.js
+  249  git status
+  250  git commit -m "Ensure that when a user saves a product, it’ll take them to the saved page"
+  251  git status
+  252  git add js/main.js 
+  253  git status
+  254  git add js/main.js
+  255  git status
+  256  git commit -m "Revised code for saved page."
+  257  git status
+  258  git add js/main.js
+  259  git commit -m "Appeneded dom tree for saved items to saved item storage."
+  260  git status 
+  261  git js/main.js
+  262  git add js/main.js
+  263  git status
+  264  git commit -m "Ensure that saved page contains saved products"
+  265  git status
+  266  git add js/main.js
+  267  git status
+  268  git commit -m "Revised code that handles saved products."
+  269  git status
+  270  git add js/data.js
+  271  git add js/main.js
+  272  git status
+  273  git commit -m "Revised handle refresh function"
+  274  git status
+  275  git add js/main.js
+  276  git status
+  277  git commit -m "Add refresh condition that keeps user on current page after refresh"
+  278  git status
+  279  git add js/main.js
+  280  git status
+  281  git commit -m "Cleaned up any styling, tested in private browser, and fixed all errors."
+  282  git status
+  283  git branch --list
+  284  git checkout issue-4-view-saved-products
+  285  git merge master
+  286  git status
+  287  git checkout masterlog
+  288  git log
+  289  git status
+  290  git push origin issue-4-view-saved-products
+  291  git status
+  292  git add js/data.js
+  293  git add js/main.js
+  294  git status
+  295  git commit -m "Fixed code based on Cody's suggestion"
+  296  git status
+  297  git add css/layout.css
+  298  git add js/main.js
+  299  git status
+  300  git commit -m "Fixed bugs within feature."
+  301  git status
+  302  git push origin issue-4-view-saved-products
+  303  git status
+  304  git checkout master
+  305  git status
+  306  git pull origin master
+  307  git status
+  308  git branch issue-5-user-delete-items
+  309  git checkout issue-5-user-delete-items
+  310  git status
+  311  git add css/layout.css
+  312  git add index.html
+  313  git add js/main.js
+  314  git status
+  315  git commit -m "Add a font-awesome trash can icon to each listing in the saved items page"
+  316  git status
+  317  git add css/layout.css
+  318  git add css/styles.css
+  319  git add index.html
+  320  git add js/main.js
+  321  git status
+  322  git commit -m "Revised delete button"
+  323  git status
+  324  git add css/styles.css
+  325  git add js/main.js
+  326  git status
+  327  git commit -m "Adjusted css for delete button"
+  328  git status
+  329  git add js/main.js
+  330  git commit -m "Revised css for delete button"
+  331  git status
+  332  git add index.html
+  333  git add js/main.js
+  334  git status
+  335  git commit -m "Appended data-entry-id to details page"
+  336  git status
+  337  git add js/main.js
+  338  git status
+  339  git commit -m "Appended data-entry-id to details listing page."
+  340  git status
+  341  git add js/main.js
+  342  git status
+  343  git commit -m "EnsurEnsure that if the user clicks yes, the listing will get deleted from the page and the DOM tree"
+  344  git status
+  345  git add js/main.js
+  346  git status
+  347  git commit -m "cleaned up styling, tested in private mode, fix all errors"
+  348  git push origin issue-5-user-delete-items
+  349  git status
+  350  git checkout master
+  351  git status
+  352  git pull origin master
+  353  git status
+  354  git branch project-code
+  355  git checkout project-code
+  356  git status
+  357  git add index.html
+  358  git add js/main.js
+  359  git status
+  360  git commit -m "HTML: deleted spaces between lines in index.html file"
+  361  git status
+  362  git add css/layout.css
+  363  git add js/main.js
+  364  git status
+  365  git commit -m "Removed comments, changed px value to rem, removed unnecessary css properties."
+  366  git status
+  367  git add css.layout.css 
+  368  git add css/layout.css
+  369  git commit -m "Css cleanup"
+  370  git status
+  371  git add js/main.js
+  372  git status
+  373  git commit -m "Removed pseudo-code comments in main.js for JavaScript"
+  374  git status
+  375  git push origin project-code
+  376  git checkout master
+  377  git pull origin master
+  378  git status
+  379  git branch project-interfaces
+  380  git checkout project-interfaces
+  381  git status
+  382  git add css/styles.css
+  383  git commit "Revised styles.css for buttons, clickable icons, and links section" 
+  384  git commit -m "Revised styles.css for buttons, clickable icons, and links section"
+  385  git status
+  386  git add css/layout.css
+  387  git status
+  388  git commit -m "Mobile-First Responsive UI: added a media query for screens that are 1280px wide or more"
+  389  git status
+  390  git add css/layout.css
+  391  git commit -m "Fluid Layout: Added a min width to make app more fluid"
+  392  git status
+  393  git add css/layout.css
+  394  git add css/styles.css
+  395  git commit -m "Revised css codes"
+  396  git status
+  397  git add css/layout.css
+  398  git add css/styles.css
+  399  git add index.html
+  400  git add js/main.js
+  401  git status
+  402  git commit -m "Network Activity: added custom error message and loading spinner"
+  403  git status
+  404  git push origin project-interfaces
+  405  git status
+  406  git checkout master
+  407  git status
+  408  git pull origin master
+  409  git status
+  410  git branch project-polish
+  411  git status
+  412  git checkout project-polish
+  413  git status
+  414  git checkout master
+  415  git pull origin master
+  416  git status
+  417  git checkout project-polish
+  418  git status
+  419  git checkout master
+  420  git branch -d project-polish
+  421  git branch --list
+  422  git status
+  423  git branch project-polish
+  424  git checkout project-polish
+  425  git remote set-url origin git@github.com:ChristinaL24/Beauty-List.git
+  426  cd ~/repos
+  427  mv <ajax-project> <Beauty-List>
+  428  mv ajax-project Beauty-List
+  429  git status
+  430  repos
+  431  cd
+  432  cd ~/repos/Beauty-List
+  433  git status
+  434  git add index.html
+  435  git add images/lipstick icon.ico
+  436  git status
+  437  git add images/lipstick icon.ico
+  438  git status
+  439  git add images/lipstick icon.ico
+  440  git status
+  441  git add images/lipstick.ico
+  442  git status
+  443  git commit -m "Updated app's favicon"
+  444  git status
+  445  git add index.html
+  446  git commit -m "Changed title to app name on html"
+  447  git status
+  448  git add index.html
+  449  git add images/makeup.jpg
+  450  git status
+  451  git add index.html
+  452  git commit -m "Make project shareable: added open graph meta tagsto index.html"
+  453  git push origin project-polish
+  454  git status
+  455  git add index.html
+  456  git commit -m "Revised meta image tag"
+  457  git status
+  458  git push origin project-polish
+  459  git status
+  460  git add index.html
+  461  git commit -m "Revised open graph meta tags"
+  462  git push origin project-polish
+  463  git status
+  464  git add index.html
+  465  git commit -m "Revised open graph meta tags"
+  466  git status
+  467  git push origin project-polish
+  468  git status
+  469  git checkout master
+  470  git status
+  471  git add js/main.js 
+  472  git status
+  473  git commit -m "Changed api end point to eliminate query parameters"
+  474  git push origin 
+  475  git status
+  476  git pull origin master
+  477  git status
+  478  git add index.html
+  479  git commit -m "Fixed meta tag for url"
+  480  git status
+  481  git push origin master
+  482  git status
+  483  git add js/main.js
+  484  git status
+  485  git commit -m "Revised http to https on main.js"
+  486  git status
+  487  git add css/layout.css
+  488  git commit -m "Fixed image height issue"
+  489  git push origin master
+  490  git status
+  491  git checkout master
+  492  cd
+  493  cd ~/repos/code-solutions
+  494  cd ~/repos/c0122-code-solutions
+  495  git status
+  496  git pull origin master
+  497  git status
+  498  git checkout array-manipulation-3
+  499  git status
+  500  git add array-manipulation-3/src/flatten.js
+  501  git add array-manipulation-3/src/zip.js
+  502  git status
+  503  git  commit -m "Finished flatten"
+  504  git status 
+  505  git status
+  506  git add array-manipulation-3/src/zip.js
+  507  git status
+  508  git add array-manipulation-3/src/zip.js
+  509  git commit -m "still in progress"
+  510  git status
+  511  git add array-manipulation-3/src/zip.js
+  512  git status
+  513  git commit -m "Completed zip"
+  514  git status
+  515  git add array-manipulation-3/src/zip.js
+  516  git commit -m "still in progress."
+  517  git status
+  518  git add array-manipulation-3/src/zip.js
+  519  git status
+  520  git add array-manipulation-3/src/zip.js
+  521  git status
+  522  git add array-manipulation-3/src/unique.js
+  523  git status
+  524  git commit -m "Completed unique"
+  525  git status
+  526  git add array-manipulation-3/src/difference.js
+  527  git status
+  528  git commit -m "Completed difference"
+  529  git status
+  530  git add array-manipulation-3/src/intersection.js
+  531  git add array-manipulation-3/src/union.js
+  532  git status
+  533  git commit -m "Completed array-manipulation-3"
+  534  git push origin array-manipulation-3
+  535  git status
+  536  git checkout master
+  537  git status
+  538  git pull origin master
+  539  git status
+  540  git branch es6-const-let
+  541  git status
+  542  git switch es6-const-let
+  543  git status
+  544  git add es6-const-let/
+  545  git status
+  546  git commit -m "Completed es6-const-let exericse."
+  547  git push origin es6-const-let
+  548  git status
+  549  git checkout master
+  550  git status
+  551  git branch es6-template-literals
+  552  git status
+  553  git switch es6-template-literals
+  554  git status
+  555  git add es6-template-literals/
+  556  git status
+  557  git commit -m "Completed es6-template-literals
+  558  git status
+  559  git commit -m " Completed es6-template-literals."
+  560  git push origin es6-template-literals
+  561  git status
+  562  git checkout master
+  563  git status
+  564  git branch es6-destructuring
+  565  git switch es6-destructuring
+  566  git status
+  567  git add es6-destructuring/
+  568  git status
+  569  git commit -m "Completed e es6-destructuring exercise."
+  570  git push origin es6-destructuring
+  571  git status
+  572  git checkout master
+  573  git status
+  574  git branch es6-arrow-functions
+  575  git status
+  576  git switch es6-arrow-functions
+  577  git status
+  578  git add es6-arrow-functions
+  579  git status
+  580  git commit -m "Completed es6-arrow-functions exercise."
+  581  git status
+  582  git push origin es6-arrow-functions
+  583  git status
+  584  git checkout master
+  585  git status
+  586  git branch string-manipulation-2
+  587  git branch string-manipulation-3
+  588  git status
+  589  git switch string-manipulation-3
+  590  git status
+  591  git add string-manipulation-3/
+  592  git status
+  593  git commit -m "Finished isPalindromic"
+  594  git status
+  595  git add string-manipulation-3/src/is-anagram.js
+  596  git status
+  597  git commit -m "Finished isAnagram"
+  598  git status
+  599  git checkout master
+  600  git status
+  601  git checkout es6-arrow-functions
+  602  git status
+  603  git checkout master
+  604  git status
+  605  cd command-line-basics
+  606  man man
+  607  cat
+  608  man cat
+  609  cat laziness.txt
+  610  cat impatience.txt
+  611  cat hubris.txt
+  612  man cat
+  613  cat laziness.txt impatience.txt hubris.txt
+  614  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  615  cat three-virtues.txt
+  616  man ls
+  617  ls
+  618  ls -a
+  619  ls -F
+  620  man ls
+  621  ls lfz-staff/
+  622  ls -a lfz-staff/
+  623  ls -F lfz-staff/
+  624  ls -aF lfz-staff > lfz-staff/contents.txt
+  625  cat lfz-staff/contents.txt
+  626  man pwd
+  627  pwd
+  628  pwd > i-was-here.txt
+  629  ls
+  630  cat i-was-here.txt
+  631  man echo
+  632  echo 'Hello, World!'
+  633  echo 'Hello, World!' > hello.txt
+  634  ls
+  635  cat hello.txt
+  636  man touch
+  637  touch tag-youre-it.txt
+  638  touch snoot/ > boop.txt
+  639  ls
+  640  ls snoot/
+  641  ls snoot
+  642  ls kill-me
+  643  ls snoot
+  644  git rm boop.txt
+  645  git mv boop.txt snoot
+  646  ls
+  647  man touch
+  648  touch snoot > boop.txt
+  649  ls
+  650  touch snoot/ boop.txt
+  651  ls
+  652  touch snoot > boop.txt
+  653  ls
+  654  snoot > boop.txt
+  655  touch snoot/boop.txt
+  656  ls snoot
+  657  man mkdir
+  658  mkdir parent
+  659  ls
+  660  mkdir -p
+  661  mkdir -p parent/child/grandchild
+  662  touch parent/child/grandchild/.gitkeep
+  663  ls -a parent/child/grandchild
+  664  man mv
+  665  mv pokiemans pokemon
+  666  ls 
+  667  man rm
+  668  rm lol.txt
+  669  ls
+  670  rm -r kill-me/
+  671  ls
+  672  man cp
+  673  cp and-then.txt no-and-then.txt
+  674  ls
+  675  cat and-then.txt
+  676  cat no-and-then.txt
+  677  man history
+  678  history
+  679  history > command-history.txt

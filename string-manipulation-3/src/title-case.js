@@ -13,19 +13,30 @@ function titleCase(title) {
     'for', 'in', 'of', 'on', 'per', 'to'];
 
   for (var i = 0; i < array.length; i++) {
-
-    var word = array[i];
-
+    var word = array[i].toLowerCase();
     if (specialCases.includes(word)) {
       var specialCaseWord = word.toLowerCase();
       newString = newString + ' ' + specialCaseWord;
-    } else if (word === 'Javascript') {
+    } else if (word === 'javascript') {
       var js = 'JavaScript';
       newString = newString + ' ' + js;
+    } else if (word === 'api') {
+      var api = 'API';
+      newString = newString + ' ' + api;
+    } else if (word === 'Javascript:' || word === 'javascript:') {
+      var colonJs = 'JavaScript:';
+      newString = newString + ' ' + colonJs;
     } else {
       var newWord = word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase();
       newString = newString + ' ' + newWord;
     }
   }
-  return newString.slice(1);
+  if (newString.includes(':')) {
+    var colonSplit = (newString.slice(1, 2).toUpperCase() + newString.slice(2)).split(': ');
+    var colonUpperCase = colonSplit[1].slice(0, 1).toUpperCase() + colonSplit[1].slice(1);
+    colonSplit[1] = colonUpperCase;
+    var colonSentence = colonSplit.join(': ');
+    return colonSentence;
+  }
+  return newString.slice(1, 2).toUpperCase() + newString.slice(2);
 }

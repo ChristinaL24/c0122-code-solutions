@@ -16,14 +16,16 @@ function titleCase(title) {
 
     var word = array[i];
 
-    var newWord = word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase();
     if (specialCases.includes(word)) {
-      newWord = word.toLowerCase();
+      var specialCaseWord = word.toLowerCase();
+      newString = newString + ' ' + specialCaseWord;
+    } else if (word === 'Javascript') {
+      var js = 'JavaScript';
+      newString = newString + ' ' + js;
+    } else {
+      var newWord = word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase();
+      newString = newString + ' ' + newWord;
     }
-    if (newWord === 'Javascript') {
-      newWord = 'JavaScript';
-    }
-    newString = newString + ' ' + newWord;
   }
   return newString.slice(1);
 }

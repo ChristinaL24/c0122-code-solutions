@@ -36,6 +36,13 @@ function titleCase(title) {
     var colonUpperCase = colonSplit[1].slice(0, 1).toUpperCase() + colonSplit[1].slice(1);
     colonSplit[1] = colonUpperCase;
     var colonSentence = colonSplit.join(': ');
+    if (colonSentence.includes('-')) {
+      var dashSplit = (colonSentence.slice(0, 1).toUpperCase() + colonSentence.slice(1)).split('-');
+      var dashUpperCase = dashSplit[1].slice(0, 1).toUpperCase() + dashSplit[1].slice(1);
+      dashSplit[1] = dashUpperCase;
+      var dashSentence = dashSplit.join('-');
+      return dashSentence;
+    }
     return colonSentence;
   }
   return newString.slice(1, 2).toUpperCase() + newString.slice(2);

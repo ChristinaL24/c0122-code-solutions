@@ -26,3 +26,13 @@ if (input === 'delete') {
     if (err) throw err;
   });
 }
+
+if (input === 'update') {
+  const updateId = process.argv[3];
+  const newSentence = process.argv[4];
+  data.notes[updateId] = newSentence;
+  const updatedNotes = JSON.stringify(data, null, 2);
+  fs.writeFile('data.json', updatedNotes, 'utf8', function (err) {
+    if (err) throw err;
+  });
+}

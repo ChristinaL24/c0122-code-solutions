@@ -26,21 +26,20 @@ app.get('/api/notes/:id', (req, res) => {
 
 app.use(express.json());
 
-let id = data.nextId;
-
 app.post('/api/notes', (req, res) => {
+  const id = data.nextId;
   if (!req.body.content) {
     res.status(400).json(({ error: 'Content is a required field' }));
-  } else if (req.body.content !== undefined) {
+  } else {
+    notes[id] = req.body;
+    notes[id].id = id;
+    data.nextId++;
     const dataJSON = JSON.stringify(data, null, 2);
     fs.writeFile('data.json', dataJSON, 'utf8', function (err) {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error has occurred' });
       } else {
-        notes[id] = req.body;
-        notes[id].id = id;
-        id++;
         res.status(201).json(notes[id]);
       }
     });
@@ -73,14 +72,14 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!req.body.content) {
     res.status(400).json({ error: 'Content is a required field' });
   }
+  notes[id] = req.body;
+  notes[id].id = id;
   const dataJSON = JSON.stringify(data, null, 2);
   fs.writeFile('data.json', dataJSON, 'utf8', function (err) {
     if (err) {
       console.error(err);
       res.status(500).json({ error: 'An unexpected error has occurred' });
     } else {
-      notes[id] = req.body;
-      notes[id].id = id;
       res.status(200).json(notes[id]);
     }
   });

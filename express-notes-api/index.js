@@ -35,8 +35,8 @@ app.post('/api/notes', (req, res) => {
     notes[id] = req.body;
     notes[id].id = id;
     id++;
-    const errorData = JSON.stringify(data, null, 2);
-    fs.writeFile('data.json', errorData, 'utf8', function (err) {
+    const dataJSON = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', dataJSON, 'utf8', function (err) {
       if (err) {
         console.error(err);
         res.status(500).json({ error: 'An unexpected error has occurred' });
@@ -54,8 +54,8 @@ app.delete('/api/notes/:id', (req, res) => {
   } else if (!notes[id]) {
     res.status(404).json({ error: 'Cannot find note with id ' + id });
   }
-  const errorData = JSON.stringify(data, null, 2);
-  fs.writeFile('data.json', errorData, 'utf8', function (err) {
+  const dataJSON = JSON.stringify(data, null, 2);
+  fs.writeFile('data.json', dataJSON, 'utf8', function (err) {
     if (err) {
       console.error(err);
       res.status(500).json({ error: 'An unexpected error has occurred' });
@@ -73,8 +73,8 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!req.body.content) {
     res.status(400).json({ error: 'Content is a required field' });
   }
-  const errorData = JSON.stringify(data, null, 2);
-  fs.writeFile('data.json', errorData, 'utf8', function (err) {
+  const dataJSON = JSON.stringify(data, null, 2);
+  fs.writeFile('data.json', dataJSON, 'utf8', function (err) {
     if (err) {
       console.error(err);
       res.status(500).json({ error: 'An unexpected error has occurred' });

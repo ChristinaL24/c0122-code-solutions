@@ -17,6 +17,5 @@ console.log('toFixed:', toFixed);
 const upperCased = languages.map(letters => letters.toUpperCase());
 console.log('upperCased:', upperCased);
 
-const firstLetters = languages.map(letters => letters.charAt(0).toUpperCase() +
-                                   letters.substring(1).toLowerCase());
+const firstLetters = languages.map(letters => letters.charAt(0).toUpperCase());
 console.log('firstLetters:', firstLetters);

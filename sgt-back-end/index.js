@@ -9,8 +9,6 @@ const db = new pg.Pool({
   }
 });
 
-app.use(express.json());
-
 app.get('/api/grades', (req, res) => {
   const sql = `
   select *
@@ -18,8 +16,38 @@ app.get('/api/grades', (req, res) => {
     `;
   db.query(sql)
     .then(result => {
-      const grades = result.rows;
-      res.status(200).json(grades);
+      const gradesTable = result.rows;
+      res.status(200).json(gradesTable);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error has occurred' });
+    });
+});
+
+app.use(express.json());
+
+app.post('/api/grades', (req, res) => {
+
+  const insertGrades = req.body;
+  if (!insertGrades.name || !insertGrades.course ||
+      !insertGrades.score || insertGrades.score < 0 ||
+      insertGrades.score > 100) {
+    res.status(400).json({ error: 'There are missing or invalid parameters' });
+    return;
+  }
+
+  const sql = `
+  insert into "grades" ("name", "course", "score")
+    values ($1, $2, $3)
+    returning *
+  `;
+
+  const params = [insertGrades.name, insertGrades.course, insertGrades.score];
+  db.query(sql, params)
+    .then(result => {
+      const grade = result.rows[0];
+      res.status(201).json(grade);
     })
     .catch(err => {
       console.error(err);

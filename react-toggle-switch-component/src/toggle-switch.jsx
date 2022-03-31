@@ -1,19 +1,22 @@
 import React from 'react';
 
 // logic will involve using boolean true or false to toggle the switch.
-// if onClick === true, toggle turns on
+// if turnOn === true, toggle turns on
 // toggle will start off as "off"
 
 class ToggleSwitch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
-
+    this.state = { turnOn: false };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState({ isClicked: true });
+    if (this.state.turnOn === true) {
+      this.setState({ turnOn: false });
+    } else if (this.state.turnOn === false) {
+      this.setState({ turnOn: true });
+    }
   }
 
   render() {

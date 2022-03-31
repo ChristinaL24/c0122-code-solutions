@@ -1,0 +1,32 @@
+button {
+  width: 6rem;
+  border: 0.18rem black solid;
+  height: 2.5rem;
+  background-color: rgb(201 201 201);
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+}
+
+.button-circle {
+  width: 2.3rem;
+  border: 0.18rem black solid;
+  height: 2rem;
+  background-color: rgb(255 255 255);
+  border-radius: 2rem;
+  position: absolute;
+  right: 3.12rem;
+  bottom: -0.1rem;
+}
+
+/*
+.button-oval-on {
+  width: 5rem;
+  border: 0.18rem black solid;
+  height: 2rem;
+  background-color: rgb(22 221 105);
+  border-radius: 1rem;
+  position: absolute;
+}
+*/

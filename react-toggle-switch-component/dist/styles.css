@@ -1,0 +1,49 @@
+button {
+  width: 6rem;
+  border: 0.18rem black solid;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  transition: 0.5s;
+}
+
+button.bg-grey {
+  background-color: grey;
+}
+
+button.bg-green {
+  background-color: green;
+}
+
+.button-circle-off {
+  width: 2.3rem;
+  border: 0.18rem black solid;
+  height: 2rem;
+  background-color: rgb(255 255 255);
+  border-radius: 2rem;
+  position: absolute;
+  right: 3.12rem;
+  bottom: -0.1rem;
+  transition: 0.5s;
+  transform: translateX(0%);
+}
+
+.button-circle-on {
+  width: 2.3rem;
+  border: 0.18rem black solid;
+  height: 2rem;
+  background-color: rgb(255 255 255);
+  border-radius: 2rem;
+  position: absolute;
+  right: 3.12rem;
+  bottom: -0.1rem;
+  transition: 0.5s;
+  transform: translateX(125%);
+}
+
+.text {
+  font-size: 1.5rem;
+  padding-left: 7.5rem;
+}

@@ -26,3 +26,6 @@ class Stopwatch extends React.Component {
 }
 
 export default Stopwatch;
+
+// use setInterval method and set a counter to increment whenever play is pressed
+// ensure that when button is paused, setInterval is paused as well

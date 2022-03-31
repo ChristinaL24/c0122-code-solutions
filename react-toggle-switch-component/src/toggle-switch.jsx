@@ -20,12 +20,23 @@ class ToggleSwitch extends React.Component {
   }
 
   render() {
-    return (
-     <button>
-        <span className='button-circle'></span>
-        <span className='button-oval-off'></span>
-     </button>
-    );
+    if (this.state.turnOn === true) {
+      return (
+        <button className='bg-grey' onClick={this.handleClick}>
+          <span className='button-circle-off'></span>
+          <span className='button-oval-off'></span>
+          <span className='text'>Off</span>
+        </button>
+      );
+    } else if (this.state.turnOn === false) {
+      return (
+        <button className='bg-green' onClick={this.handleClick}>
+          <span className='button-circle-on'></span>
+          <span className='button-oval-off'></span>
+          <span className='text'>On</span>
+        </button>
+      );
+    }
   }
 }
 

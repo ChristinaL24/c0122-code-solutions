@@ -3,29 +3,51 @@ import React from 'react';
 class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: false };
+    this.state = {
+      isCounting: false,
+      seconds: 0
+    };
     this.handleClick = this.handleClick.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+
+  tick() {
+    this.setState({ seconds: this.state.seconds + 1 });
   }
 
   handleClick() {
-    this.setState({
-      isClicked: !this.state.isClicked
-    });
+    if (this.state.isCounting === false) {
+      this.timer = setInterval(() => this.tick(), 1000);
+      this.setState({ isCounting: true });
+    } else {
+      clearInterval(this.timer);
+      this.setState({ isCounting: false });
+    }
+  }
+
+  reset() {
+    if (!this.state.isCounting) {
+      this.setState({ seconds: 0 });
+    }
   }
 
   render() {
-    return (
-      <div
-        onClick={this.handleClick}
-        className='circle'>
-          <span className='text'>0</span>
-          <i className='fa-solid fa-play'></i>
-      </div>
-    );
+    if (this.state.isCounting === false) {
+      return (
+        <div onClick={this.reset} className='circle'>
+          <span className='text'>{this.state.seconds}</span>
+          <i onClick={this.handleClick} className='fa-solid fa-play'></i>
+        </div>
+      );
+    } else {
+      return (
+        <div className='circle'>
+          <span className='text'>{this.state.seconds}</span>
+          <i onClick={this.handleClick} className='fa-solid fa-pause'></i>
+        </div>
+      );
+    }
   }
 }
 
 export default Stopwatch;
-
-// use setInterval method and set a counter to increment whenever play is pressed
-// ensure that when button is paused, setInterval is paused as well

@@ -10,9 +10,11 @@ class Drawer extends React.Component {
   }
 
   handleClick() {
-    this.setState({
-      click: true
-    });
+    if (this.state.click === true) {
+      this.setState({ click: false });
+    } else {
+      this.setState({ click: true });
+    }
   }
 
   getDisplay() {
@@ -38,16 +40,16 @@ class Drawer extends React.Component {
     const overlay = this.getOverlay();
     return (
       <>
-       <div className={overlay}>
+       <div onClick={this.handleClick} className={overlay}>
           <i onClick={this.handleClick} className='fa-solid fa-align-justify icon'></i>
         </div>
         <div className={display}>
           <h2>Choose a game!</h2>
-          <p>Pokemon Saphire</p>
-          <p>Pokemon Ruby</p>
-          <p>Pokemon Crystal</p>
-          <p>Pokemon X</p>
-          <p>Pokemon Y</p>
+          <p onClick={this.handleClick}>Pokemon Saphire</p>
+          <p onClick={this.handleClick}>Pokemon Ruby</p>
+          <p onClick={this.handleClick}>Pokemon Crystal</p>
+          <p onClick={this.handleClick}>Pokemon X</p>
+          <p onClick={this.handleClick}>Pokemon Y</p>
         </div>
       </>
     );

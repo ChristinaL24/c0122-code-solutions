@@ -51,6 +51,6 @@ p:hover {
   padding-top: 3rem;
   transition: 0.5s;
   transform: translateX(0%);
-  box-shadow: 10px 10px 10px #464646;
+  box-shadow: 8px 8px 8px #3a3a3a;
   display: block;
 }

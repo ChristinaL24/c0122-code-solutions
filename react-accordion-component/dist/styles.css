@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 6rem auto 4rem;
+  padding: 0 10px;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.list-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  background-color: #80aa67;
+  color: #fff;
+  text-align: left;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.item-bg {
+  background-color: #f7f7f7;
+  padding: 1.3rem;
+}

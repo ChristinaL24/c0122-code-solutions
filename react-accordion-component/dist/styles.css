@@ -6,8 +6,8 @@
 
 .container {
   max-width: 600px;
-  margin: 6rem auto 4rem;
-  padding: 0 10px;
+  margin: 5rem auto;
+  padding: 1rem;
 }
 
 .list-style {
@@ -19,22 +19,25 @@
   font-size: 1rem;
 }
 
-.button {
+.name {
   font-size: 1.5rem;
   background-color: #80aa67;
   color: #fff;
   text-align: left;
   font-weight: bolder;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   align-items: center;
   padding: 1rem 0.5rem;
   cursor: pointer;
-  border: none;
+  border: 2px solid black;
 }
 
-.item-bg {
+.bio-on {
   background-color: #f7f7f7;
   padding: 1.3rem;
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 1rem;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.list-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  background-color: #80aa67;
+  color: #fff;
+  text-align: left;
+  font-weight: bolder;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.bio-on {
+  background-color: #f7f7f7;
+  padding: 1.3rem;
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none;
+}

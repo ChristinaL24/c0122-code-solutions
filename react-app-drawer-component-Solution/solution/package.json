@@ -1,11 +1,11 @@
 {
-  "name": "react-hot-button-component",
+  "name": "react-app-drawer-component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch --mode=development --devtool=source-map",
+    "watch": "webpack --watch --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

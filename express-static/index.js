@@ -3,11 +3,9 @@ const app = express();
 
 const path = require('path');
 
-// eslint-disable-next-line no-unused-vars
-const absolutePath = path.join('_dirname', 'public');
+const absolutePath = path.join(__dirname, 'public');
 
-// eslint-disable-next-line no-unused-vars
-const middleware = app.use(express.static('public'));
+app.use(express.static(absolutePath));
 
 app.listen(3000, () => {
   // eslint-disable-next-line no-console

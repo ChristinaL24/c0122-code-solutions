@@ -80,6 +80,31 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+
+    // use array.findIndex to return todoId
+    const findIndex = this.state.todos.findIndex(todo => todo.todoId === todoId);
+    const todoIndex = this.state.todos[findIndex];
+    const toggle = { isCompleted: !todoIndex.isCompleted };
+
+    // serialize the 'toggle' w/ JSON.stringify
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(toggle)
+    })
+      .then(response => response.json())
+      .then(todos => {
+        // use the map method to create our new arrays list
+        const newTodoList = this.state.todos.map(todo => {
+          // ternary: if todo.todId is strictly equal to todoId, return todos. If not, return todo
+          return todo.todoId === todoId ? todos : todo;
+        });
+        // use setState to update the value of todos with the new todo list
+        this.setState({ todos: newTodoList });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
   render() {

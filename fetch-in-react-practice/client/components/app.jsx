@@ -46,6 +46,16 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
+    fetch('/api/todos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newTodo)
+    })
+      .then(response => response.json())
+      .then(todos => this.setState({ todos: this.state.todos.concat(todos) }))
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
   toggleCompleted(todoId) {

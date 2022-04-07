@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.topic {
+  width: 500px;
+}
+
+.topic-title {
+  background-color: lightgrey;
+}
+
+.topic-title h3 {
+  margin: 0;
+}
+
+.topic-title,
+.topic-content {
+  padding: 1rem;
+  border: 1px solid rgb(36 36 36);
+}

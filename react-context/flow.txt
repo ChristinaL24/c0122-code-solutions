@@ -1,0 +1,46 @@
+Create a file in the root of your react-context solution directory named flow.txt.
+For each feature in the application, describe the flow of the code in writing,
+including the client, server, and database. How does the code work?
+
+
+User can sign up.
+  -Client:
+    -The client will send a POST request to the server to '/api/auth/sign-up' and
+     in the POST request body, the client will include the values for the username and password
+  -Server:
+    -The jsonMiddleware will parse the json payload from the incoming POST request
+  -Database:
+    -The password gets hashed and inserted into the 'users' table along with the username.
+     Once this promise is fulfilled, the user will receive a 201 status in the response along
+     with the userId, username, and the time the sign up was created at.
+
+User can sign in.
+  -Client:
+    -To sign in, the client will send a POST request to the server at '/api/auth/sign-in' and
+     in the POST request body, the client will include their username and password. Once the client
+     has signed in, the jwt token will be saved into the client's local storage.
+  -Server:
+    -The jsonMiddleware will parse the json payload from the incoming POST request.
+     After the database is queried, the server will check if the user exist in the
+     database. If the user does not exist, the server will throw an error. If the user
+     does exist, then the server will verify the password against the hashedPassword.
+     If it matches, the user will be granted a signed token and the user will be able
+     to successfully log into the app. If there is not a match, the server will throw a 401 error.
+  -Database:
+    -The users table is being queried for the userId and hashedPassword.
+
+User can stay signed in (even if they refresh the page).
+  -Client:
+    -The user will stay signed in even after a refresh because of the jwt that
+     is in the user's local storage.
+  -Server:
+    -The server will check if the user's token exist within the local storage body
+     using the decodeToken method.
+
+
+User can sign out.
+  -Client:
+    -The client clicks the sign out button and is brought back to the sign in page
+  -Server:
+    -When the client signs out, the user's jwt token gets removed from local localStorage
+     and the user's state becomes null.

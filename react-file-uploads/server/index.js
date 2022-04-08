@@ -31,6 +31,7 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
    */
 
   const url = '/images' + req.file.filename;
+  // const url = `/images/${req.file.filename}`;
 
   const sql = `
     insert into "images" ("caption", "url")
@@ -41,7 +42,8 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
   const params = [caption, url];
   db.query(sql, params)
     .then(result => {
-      res.json(result.rows);
+      // const image = result.rows, could plug this in as json argument
+      res.status(201).json(result.rows);
     })
     .catch(err => next(err));
 });
@@ -56,6 +58,7 @@ app.get('/api/images', (req, res, next) => {
       res.json(result.rows);
     })
     .catch(err => next(err));
+  // query method of db object returnins a promise object
 });
 
 app.use(errorMiddleware);

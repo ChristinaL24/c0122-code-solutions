@@ -7,6 +7,7 @@ export default class App extends React.Component {
       caption: ''
     };
     this.fileInputRef = React.createRef();
+    // React.createRef() a plain object that gets passed to Ref
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCaptionChange = this.handleCaptionChange.bind(this);
   }
@@ -19,6 +20,7 @@ export default class App extends React.Component {
 
     event.preventDefault();
     const formData = new FormData();
+    // FormData to deal with anything file related; alternate to json
     formData.append('caption', this.state.caption);
     formData.append('image', this.fileInputRef.current.files[0]);
 
@@ -105,3 +107,6 @@ export default class App extends React.Component {
     );
   }
 }
+
+// Ref is a way to poke a hole through the react element to get to the real DOM, and it'll
+// stick a reference to that DOM element so that when you go to the current property, you'll get the info on it

@@ -9,3 +9,17 @@ function get2ndFromTop(stack) {
   stack.push(firstPop);
   return secondValue;
 }
+
+/*
+
+Tim's Code
+
+function get2ndFromTop(stack) {
+  const top = stack.pop();
+  if (typeof top === 'undefined') return;
+  const next = stack.peek();
+  stack.push(top);
+  return next;
+}
+
+*/

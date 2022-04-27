@@ -7,3 +7,13 @@ function isEmpty(stack) {
     return false;
   }
 }
+
+/*
+
+Tim's code:
+
+function isEmpty(stack) {
+  return typeof stack.peek() === 'undefined';
+}
+
+*/
